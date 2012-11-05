@@ -72,7 +72,7 @@ public class MergedCharacterInputStream extends InputStream {
 	}
 
 
-	public void merge(InputStream[] ins) {
+	protected void merge(InputStream[] ins) {
 		for (InputStream in : ins) {
 			ReadThread t = new ReadThread(in, bufQueue);
 			threads.add(t);
