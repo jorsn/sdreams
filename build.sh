@@ -16,9 +16,9 @@ if [ "$1" != '--debug' ]; then
 	sed -si -e 's+boolean debug+final boolean debug+g' $(< ../../build-list)
 fi
 
-javac -cp $(ls ../../lib/*) -d $B_DIR $(< ../../build-list)
+javac -cp $(ls ../../lib/*) -d ../bin/ $(< ../../build-list)
 
-cd ../bin && jar -cf $NAME.jar *
+cd ../bin && jar -cf $NAME.jar $(ls)
 cp $NAME.jar ../../
 cd ../../
 
