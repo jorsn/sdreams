@@ -10,7 +10,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class MergedCharacterInputStream extends InputStream {
 
-	public boolean debug;
+	public boolean debug = false;
 	private int debugMsgIndent;
 
 	protected int bufQsize;
@@ -96,7 +96,6 @@ public class MergedCharacterInputStream extends InputStream {
 	}*/
 
 	public MergedCharacterInputStream (int queueSize, InputStream[] ins) {
-		debug = false;
 		debugMsgIndent = 0;
 
 		bufQsize = queueSize;
