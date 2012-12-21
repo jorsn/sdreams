@@ -73,7 +73,7 @@ class MergedCharacterInputStreamTest {
 			}
 
 			MergedCharacterInputStream s = new MergedCharacterInputStream(6, ins);
-			s.setDebug(verbose);
+			s.debug = verbose;
 
 			System.err.println("Test: reading");
 

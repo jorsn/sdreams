@@ -107,10 +107,6 @@ public class MergedCharacterInputStream extends InputStream {
 		merge(ins);
 	}
 
-	public void setDebug(boolean b) {
-		debug = b;
-	}
-
 	protected void merge(InputStream[] ins) {
 		for (InputStream in : ins) {
 			ReadThread t = new ReadThread(in, bufQueue, threads);
