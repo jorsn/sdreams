@@ -95,7 +95,7 @@ public class MergedCharacterInputStream extends InputStream {
 		// return new MergedCharacterInputStream(4, new InputStream[] { in });
 	}*/
 
-	public MergedCharacterInputStream (int queueSize, InputStream[] ins) {
+	public MergedCharacterInputStream (int queueSize, InputStream... ins) {
 		debugMsgIndent = 0;
 
 		bufQsize = queueSize;
