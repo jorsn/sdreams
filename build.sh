@@ -4,15 +4,22 @@ cd $(dirname $0)
 
 NAME=$(basename $PWD)-$(./get-version.sh)
 
-B_DIR=../build-$RANDOM
+B_DIR=build-$RANDOM
 
-cd src
 mkdir $B_DIR
+cp -r src $B_DIR/
 
-javac -cp $(ls ../lib/*) -d $B_DIR $(< ../build-list)
+cd $B_DIR/src
+mkdir ../bin
 
-cd $B_DIR && jar -cf $NAME.jar $(ls)
-cp $NAME.jar ../
-cd ../
+if [ "$1" != '--debug' ]; then
+	sed -si -e 's+boolean debug+final boolean debug+g' $(< ../../build-list)
+fi
+
+javac -cp $(ls ../../lib/*) -d $B_DIR $(< ../../build-list)
+
+cd ../bin && jar -cf $NAME.jar *
+cp $NAME.jar ../../
+cd ../../
 
 rm -rf $(basename $B_DIR)
