@@ -2,7 +2,7 @@
  * CharsetSensitiveFileToStringReader --- Read text files charset sensitive.
  * This is no real `Reader`!
  *
- * Copyright (C) 2011, Johannes Rosenberger <jo.rosenberger(at)gmx-topmail.de>
+ * Copyright (C) 2013, Johannes Rosenberger <jo.rosenberger(at)gmx-topmail.de>
  *
  * This code is released under a BSD Style License.
  *
