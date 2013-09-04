@@ -1,4 +1,4 @@
-sdreams --- dream streams for java
+sdreams — dream streams for java
 ========================================
 
 **sdreams** is a bundle of a stream and a "reader" that I have written for
