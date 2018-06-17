@@ -4,7 +4,7 @@ sdreams — dream streams for java
 **sdreams** is a bundle of a stream and a "reader" that I have written for
 my own java programs. Both shall be used with *text files/character streams*!
 
-
+**IMPORTANT NOTE (2018-06-17):** This dates from the early days I programmed and therefore is susceptible to very bad code quality. Additionally, I know of no recent use of this and therefore haven't updated it for some years. Hence, *I declare this as deprecated and don't recommend it for use.* If you *want* to use it, please contact me under <johannes.rosenberger (at) jorsn.eu>.
 
 Classes
 -----------
